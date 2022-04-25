@@ -1,0 +1,58 @@
+:root {
+    --dark-red-bg: #851d1d;
+    --purple-1: #8d58c4;
+    --purple-bg: #234234;
+    color:white;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("/src/images/camille-couvez-H5PnIYI_1I0-unsplash.jpg");
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+}
+#left-side {
+
+    width:clamp(0%,40%,50% );
+}
+
+#right-side {
+    color: black;
+    background-color: aliceblue;
+    padding-left: 3rem;
+}
+
+
+#title-container {
+    --height-top: 10rem;
+    --height-bottom: 4rem;
+    background-color: rgb(190,190,190);
+    letter-spacing: 0.03rem;
+
+}
+
+#title-container {
+    height:var(--height-top);
+}
+
+#title-container > p {
+    padding-top: 3rem;
+    width: clamp(45ch,0, 75ch)
+}
+#title-container >p+p {
+    padding-top: 1rem;
+}
+
+form {
+    padding: 3rem 0;
+}
+#submit-container {
+    height: var(--height-bottom);
+}
+
+
+
