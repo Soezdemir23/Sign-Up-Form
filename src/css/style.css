@@ -16,43 +16,24 @@ body {
     width: 100vw;
 }
 #left-side {
-
-    width:clamp(0%,40%,50% );
+    width:clamp(30%,60%,70% );
 }
 
 #right-side {
     color: black;
     background-color: aliceblue;
     padding-left: 3rem;
-}
-
-
-#title-container {
-    --height-top: 10rem;
-    --height-bottom: 4rem;
-    background-color: rgb(190,190,190);
-    letter-spacing: 0.03rem;
-
+    width: 100%;
+    --padding-title: 4rem;
+    --padding-submit-container: 4rem;
 }
 
 #title-container {
-    height:var(--height-top);
+    padding: var(--padding-title) 0;
+    background-color: whitesmoke;
 }
 
-#title-container > p {
-    padding-top: 3rem;
-    width: clamp(45ch,0, 75ch)
-}
-#title-container >p+p {
-    padding-top: 1rem;
-}
-
-form {
-    padding: 3rem 0;
-}
 #submit-container {
-    height: var(--height-bottom);
+    padding: var(--padding-submit-container) 0;
 }
-
-
 
