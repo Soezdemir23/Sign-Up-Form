@@ -102,13 +102,12 @@ button:hover {
     padding-top: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 300px) {
     #left-side {
         display: none;
     }
     
 }
-
 @media (min-width: 800px) {
     #right-side {
         font-size: 1.5rem;
@@ -130,4 +129,8 @@ button:hover {
     input {
         font-size: 1.3rem;
     }   
+}
+
+@media (min-width: 1200px) {
+    
 }
