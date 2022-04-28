@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("/src/fonts/JosefinSans-VariableFont_wght.ttf");
+}
+/*First make it fit to 868 width*/
 :root {
     --dark-red-bg: #851d1d;
     --purple-1: #8d58c4;
     --purple-bg: #234234;
     color:white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 *{
     margin:0;
@@ -18,8 +23,16 @@ body {
 }
 /*LEft side that needs to vanish by the time the screen reaches 600px*/
 #left-side {
+    width:clamp(20%,60%,70% );
+}
 
-    width:clamp(0%,40%,50% );
+header {
+    position: relative;
+    background-color: #851d1d;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    top: calc(100vh - 60%);
 }
 
 
@@ -34,13 +47,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    ;
+    
 }
 
 #title-container {
     padding-top: 6rem;
-    padding-left: 4rem;
-    
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+caption {
+    padding-bottom: 0.2rem;
 }
 label {
     display: inline;
@@ -56,6 +72,7 @@ form {
     background-color: #ffffff;
     box-shadow:0px 8px 15px 2px rgba(0,0,0,0.17);
     padding-left: 3rem;
+    padding-bottom: 1rem;;
 }
 form > div {
     display: flex;
@@ -67,7 +84,7 @@ form > div {
 
 }
 #submit-container {
-    padding-left: 4rem;
+    padding-left: 3rem;
 }
 button{
     font-size: 1.5rem;
@@ -79,6 +96,38 @@ button{
 
 button:hover {
     background-color: var(--purple-bg);
+
+}
+#submit-container>p {
+    padding-top: 1rem;
+}
+
+@media (max-width: 700px) {
+    #left-side {
+        display: none;
+    }
     
 }
 
+@media (min-width: 800px) {
+    #right-side {
+        font-size: 1.5rem;
+    }
+
+    .form-container  >div {
+        text-align: left;
+        width: 30%;
+    }
+
+    .form-container > div + div {
+        padding-left: 5rem;
+    }
+    
+    .form-container > div > input {
+        height:1.5rem;
+    }
+    
+    input {
+        font-size: 1.3rem;
+    }   
+}
