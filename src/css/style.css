@@ -27,14 +27,14 @@ body {
 #right-side {
     font-size: 2rem;
     color: black;
-    background-color: #f9fafb;
-}
+    background-color: blue;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}*/
 
 #right-side-container {
     display: flex;
     flex-direction: column;
-    padding-left: 3rem;
-    margin-right: 3rem;
     gap: 3rem;
 }
 
