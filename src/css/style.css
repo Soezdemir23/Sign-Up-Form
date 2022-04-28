@@ -102,35 +102,8 @@ button:hover {
     padding-top: 1rem;
 }
 
-@media (min-width: 300px) {
+@media (max-width: 425px) {
     #left-side {
         display: none;
     }
-    
-}
-@media (min-width: 800px) {
-    #right-side {
-        font-size: 1.5rem;
-    }
-
-    .form-container  >div {
-        text-align: left;
-        width: 30%;
-    }
-
-    .form-container > div + div {
-        padding-left: 5rem;
-    }
-    
-    .form-container > div > input {
-        height:1.5rem;
-    }
-    
-    input {
-        font-size: 1.3rem;
-    }   
-}
-
-@media (min-width: 1200px) {
-    
 }
