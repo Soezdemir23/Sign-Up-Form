@@ -85,6 +85,7 @@ form > div {
 }
 #submit-container {
     padding-left: 3rem;
+    background-color: #fbfbfb;;
 }
 button{
     font-size: 1.5rem;
@@ -102,8 +103,76 @@ button:hover {
     padding-top: 1rem;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #8d58c4;
+}
+
+a:active {
+    color: #851d1d;
+}
+
 @media (max-width: 425px) {
     #left-side {
         display: none;
+    }
+
+    #title-container {
+        padding-bottom: 2rem;
+    }
+
+    form {
+        padding-top: 1rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+    }
+    /*In HTML elements this tells me it is a "#text", WHY?! it is a caption! 
+      And it doesn't work either way -_-*/
+    /*#text {
+        padding-bottom: 5rem;
+    }*/
+    form > div:first-child {
+        padding-top: 1rem;
+    }
+    label {
+        padding: 1rem 0;
+    }
+    #submit-container {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #left-side {
+        
+    }
+
+    #title-container {
+        padding-bottom: 2rem;
+    }
+
+    form {
+        padding-top: 1rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+    }
+    /*In HTML elements this tells me it is a "#text", WHY?! it is a caption! 
+      And it doesn't work either way -_-*/
+    /*#text {
+        padding-bottom: 5rem;
+    }*/
+    form > div:first-child {
+        padding-top: 1rem;
+    }
+    label {
+        padding: 1rem 0;
+    }
+    #submit-container {
+        padding-top: 1rem;
     }
 }
