@@ -34,7 +34,12 @@ header {
     line-height: 3rem;
     top: calc(100vh - 60%);
 }
-
+footer {
+    text-align: center;
+    position: absolute;
+    top: 480px;
+    left: calc(20%);
+}
 
 /*Right side with the form*/
 #right-side {
@@ -85,7 +90,9 @@ form > div {
 }
 #submit-container {
     padding-left: 3rem;
-    background-color: #fbfbfb;;
+    background-color: #fbfbfb;
+    
+
 }
 button{
     font-size: 1.5rem;
@@ -139,18 +146,16 @@ a:active {
         padding-top: 1rem;
     }
     label {
-        padding: 1rem 0;
+        padding: 1.4rem 0;
     }
     #submit-container {
         padding-top: 1rem;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
-    #left-side {
-        
-    }
+   
 
     #title-container {
         padding-bottom: 2rem;
