@@ -36,9 +36,8 @@ header {
     line-height: 3rem;
     top: calc(100vh - 60%);
 }
-/*I do not get why this doesn't go down. I CAN'T believe I had to use JS for this.*/
+/*I do not get why this doesn't go down. I CAN'T believe I had to use JS for the top and left.*/
 footer {
-    text-align: center;
     position: absolute;
 }
 

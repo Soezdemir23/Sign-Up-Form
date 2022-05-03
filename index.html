@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style.css"> 
+    <script src="app.js" type="text/javascript" defer="defer"></script>
     <title>Sign Up</title>
 </head>
 <body>
@@ -28,25 +29,6 @@
             <p id="login-stat">Already have an account? <a href="login.html">Log in</a></p>
         </div>
     </section>
-    <script defer> 
-        let footerEl = document.querySelector('footer');
-        function adaptWidthAndHeight(height,width){
-            footerEl.style.top = `calc(${document.documentElement.scrollHeight}px - ${height}%)`;
-            footerEl.style.right = `calc(${document.documentElement.scrollWidth}px - ${width}%)`;
-        }
-        function giveScrollHeight() {
-            let width = document.documentElement.scrollWidth;
-            console.log(width)
-            if (width <700) {
-                adaptWidthAndHeight(10,20);
-            } else if (width <= 1000) {
-                adaptWidthAndHeight(10,22);
-            } else if (width <= 1900){
-                console.log()
-                adaptWidthAndHeight(20, 22)
-            }     
-        } 
-        window.onresize = giveScrollHeight()
-        </script>
+
 </body>
 </html>
