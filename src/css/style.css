@@ -4,18 +4,22 @@
 }
 /*First make it fit to 868 width*/
 :root {
-    --dark-red-bg: #851d1d;
     --purple-1: #8d58c4;
     --purple-bg: #234234;
-    --left-side-width: clamp(20%,60%,70%);
+    --left-side-width: clamp(250px,50vw,2000px);
+    --right-side-width: clamp(725px, 50vw, 2000px);
+    --font-size: clamp(14px, 16px, 44px);
     color:white;
     font-family: "Josefin Sans", sans-serif;
+    font-size: var(--font-size);
 }
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+
 body {
     background-image: url("/src/images/camille-couvez-H5PnIYI_1I0-unsplash.jpg");
     height: 100vh;
@@ -30,20 +34,29 @@ body {
 
 header {
     position: relative;
-    background-color: #851d1d;
+    background-color: rgba(240,240,240,0.15);
     height: 3rem;
     text-align: center;
     line-height: 3rem;
     top: calc(100vh - 60%);
+    
 }
 /*I do not get why this doesn't go down. I CAN'T believe I had to use JS for the top and left.*/
 footer {
     position: absolute;
 }
+footer > a {
+    text-decoration: none;
+    color: white;
+}
+footer > a:hover {
+    color: crimson;
+}
+
 
 /*Right side with the form*/
 #right-side {
-    font-size: 2rem;
+    width: var(--right-side-width);
     color: black;
     background-color: #fbfbfb;
 }
@@ -55,6 +68,10 @@ footer {
     padding-right: 3rem;
     padding-bottom: 0.5rem;
 }
+
+#title-container > p {
+    padding-bottom: 0.5rem;
+}
 caption {
     padding-bottom: 0.2rem;
 }
@@ -63,14 +80,15 @@ label {
 }
 input{
     display:inline-block;
-    height: 4rem;
-    font-size: 2rem;
+    height: clamp(1re);
+    width: max(25%, 6rem);
+    font-size: var(--font-size);
 }
 
 form {
-    width:100%;
-    background-color: #ffffff;
-    box-shadow:0px 8px 15px 2px rgba(0,0,0,0.5);
+    width: var(--right-side-width);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow:5px 12px 15px 5px rgba(0,0,0,0.7);
     padding-left: 3rem;
     padding-bottom: 1rem;
     padding-right: 2rem;
@@ -94,8 +112,8 @@ form > div {
     padding-bottom: 0.5rem;
 }
 button{
-    font-size: 1.5rem;
     background-color: var(--purple-1);
+    font-size: var(--font-size);
     color: white;
     padding: 0.9rem 2rem;
     border-radius: 2rem;
@@ -121,96 +139,3 @@ a:hover {
 a:active {
     color: #851d1d;
 }
-
-@media (max-width: 425px) {
-    #left-side {
-        display: none;
-    }
-
-    #title-container {
-        padding-bottom: 2rem;
-    }
-
-    form {
-        padding-top: 1rem;
-        padding-right: 2rem;
-        padding-bottom: 1rem;
-    }
-    /*In HTML elements this tells me it is a "#text", WHY?! it is a caption! 
-      And it doesn't work either way -_-*/
-    /*#text {
-        padding-bottom: 5rem;
-    }*/
-    form > div:first-child {
-        padding-top: 1rem;
-    }
-    label {
-        padding: 1rem 0;
-    }
-    #submit-container {
-        padding-top: 1rem;
-    }
-}
-/*Left side is available*/
-@media (max-width: 768px) {
-    /*Left side*/
-
-    #left-side {
-        display: none;
-    }
-
-    /*right side*/
-    #title-container {
-        padding-bottom: 2rem;
-    }
-
-    form {
-        padding-top: 1rem;
-        padding-right: 2rem;
-        padding-bottom: 1rem;
-    }
-    /*In HTML elements this tells me it is a "#text", WHY?! it is a caption! 
-      And it doesn't work either way -_-*/
-    /*#text {
-        padding-bottom: 5rem;
-    }*/
-    form > div:first-child {
-        padding-top: 1rem;
-    }
-    label {
-        padding: 1rem 0;
-    }
-    #submit-container {
-        padding-top: 1rem;
-    }
-}
-
-
-
-@media (max-width: 1000px){
-    
-    header {
-        height: 25%;
-        top: 75%
-    }
-    header > p {
-        position: relative;
-        top: 20%;
-        font-size: 2rem;
-    }
-
-
-    #title-container {
-        padding-bottom: 1rem;
-    }
-
-    form {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-right: 2rem;
-    }
-    #submit-container {
-        padding-top: 1rem;
-    }
-
-} 
