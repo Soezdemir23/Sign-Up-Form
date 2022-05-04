@@ -139,3 +139,9 @@ a:hover {
 a:active {
     color: #851d1d;
 }
+@media (max-width:800px) {
+    #left-side {
+        display: none;
+    }
+    
+}
